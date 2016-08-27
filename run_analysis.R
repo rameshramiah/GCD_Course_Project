@@ -14,21 +14,18 @@
     # 1. Merge the training and the test sets to create one data set.
     
     # Read the train data
-    subject_train <- read.table('./UCI HAR Dataset/train/subject_train.txt',
-                                header=FALSE)
-    x_train <- read.table('./UCI HAR Dataset/train/x_train.txt',header=FALSE)
-    y_train <- read.table('./UCI HAR Dataset/train/y_train.txt',header=FALSE)
+    subject_train <- read.table('./UCI HAR Dataset/train/subject_train.txt')
+    x_train <- read.table('./UCI HAR Dataset/train/x_train.txt')
+    y_train <- read.table('./UCI HAR Dataset/train/y_train.txt')
     
     # Read the test data
-    subject_test <- read.table('./UCI HAR Dataset/test/subject_test.txt',
-                               header=FALSE)
-    x_test <- read.table('./UCI HAR Dataset/test/x_test.txt',header=FALSE)
-    y_test <- read.table('./UCI HAR Dataset/test/y_test.txt',header=FALSE)
+    subject_test <- read.table('./UCI HAR Dataset/test/subject_test.txt')
+    x_test <- read.table('./UCI HAR Dataset/test/x_test.txt')
+    y_test <- read.table('./UCI HAR Dataset/test/y_test.txt')
     
     # Read the activities and features data
-    features <- read.table('./UCI HAR Dataset/features.txt',header=FALSE)
-    activity_type <- read.table('./UCI HAR Dataset/activity_labels.txt',
-                                header=FALSE)
+    features <- read.table('./UCI HAR Dataset/features.txt')
+    activity_type <- read.table('./UCI HAR Dataset/activity_labels.txt')
     
     # Assign column names to train and activities data
     colnames(subject_train) <- "subjectId"
@@ -132,7 +129,7 @@
     tidy_data <- arrange(tidy_data, subjectId)
     
     # write tidy_data to a text file on disk
-    write.table(tidy_data, './tidy_data.txt',row.names=TRUE);
+    write.table(tidy_data, './tidy_data.txt',row.names=FALSE);
     
 
 }
