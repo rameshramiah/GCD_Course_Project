@@ -4,7 +4,7 @@
 **Overview**
 ------------
 
-This codebook provides additional information about the variables, data and transformations used for this project.
+This codebook provides additional information about the source data, transformations and variables used for this project.
 
 **Source Data**
 ---------------
@@ -89,18 +89,18 @@ A new column is added to intermediate data set with the activity description. Ac
 
 ### *Label variables appropriately*
 
-Labels given from the original collectors were changed: to obtain valid R names without parentheses, dashes and commas to obtain more descriptive labels
+Labels given from the original collectors were changed: to obtain valid R names without parentheses, dashes and commas to obtain more descriptive labels.
 
 ### *Create a tidy data set*
 
 From the intermediate data set is created a final tidy data set where numeric variables are averaged for each activity and each subject.
 
-The tidy data set contains 180 observations with 21 variables divided in'
+The tidy data set contains 180 observations with 21 variables divided in,
 
 -   an identifier of the subject who carried out the experiment (Subject): 1 to 30
 -   an activity label (Activity): WALKING, WALKING UPSTAIRS, WALKING DOWNSTAIRS, SITTING, STANDING, LAYING
 -   an activity ID for the Activity label: 1-WALKING, 2-WALKING UPSTAIRS, 3-WALKING DOWNSTAIRS, 4-SITTING, 5-STANDING, 6-LAYING
--   18 features vector with time and domain signal variables (numeric)
+-   18 features vector with time and domain signal variables (numeric).
 
 For variables derived from mean and standard deviation estimation, the previous labels are augmented with the terms "Mean" or "StandardDeviation".
 
